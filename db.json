@@ -1,0 +1,11 @@
+{
+  "products": [
+    {
+      "name": "cadeira",
+      "id": 1,
+      "amount": 20,
+      "description": "vermelha"
+    }
+  ],
+  "werehouse": []
+}
