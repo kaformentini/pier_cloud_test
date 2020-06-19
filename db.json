@@ -1,18 +1,23 @@
 {
   "products": [
     {
-      "name": "Banana",
-      "id": "ff72df10-44c8-4189-b566-835e38e5cef3",
+      "name": "mamao",
+      "id": "30491d92-0669-4539-beba-1c8031db8311",
       "description": "vermelha"
     },
     {
-      "name": "Banana",
-      "id": "b009fc29-281b-4605-9aef-1b344276e624",
+      "name": "mamao",
+      "id": "b7e3fcd9-2293-42dc-9859-a0c7c8c604db",
       "description": "vermelha"
     },
     {
-      "name": "Banana",
-      "id": "53321257-f958-4398-8fe7-282d1c8f4ce6",
+      "name": "mamao",
+      "id": "98ce8b67-16b1-4dee-bafe-b97c168dd271",
+      "description": "vermelha"
+    },
+    {
+      "name": "mamao",
+      "id": "9c86388d-0d2d-436d-93c4-04036ddf9ca0",
       "description": "vermelha"
     }
   ],
@@ -36,18 +41,44 @@
   ],
   "productWarehouse": [
     {
-      "productId": "ff72df10-44c8-4189-b566-835e38e5cef3",
-      "warehouseId": "3",
-      "amount": 9
-    },
-    {
-      "productId": "b009fc29-281b-4605-9aef-1b344276e624",
-      "amount": 10
-    },
-    {
-      "productId": "53321257-f958-4398-8fe7-282d1c8f4ce6",
+      "productId": "30491d92-0669-4539-beba-1c8031db8311",
       "warehouseId": "4",
-      "amount": 10
+      "amount": "10"
+    },
+    {
+      "productId": "30491d92-0669-4539-beba-1c8031db8311",
+      "warehouseId": "1",
+      "amount": "15"
+    },
+    {
+      "productId": "b7e3fcd9-2293-42dc-9859-a0c7c8c604db",
+      "warehouseId": "4",
+      "amount": "10"
+    },
+    {
+      "productId": "b7e3fcd9-2293-42dc-9859-a0c7c8c604db",
+      "warehouseId": "1",
+      "amount": "15"
+    },
+    {
+      "productId": "98ce8b67-16b1-4dee-bafe-b97c168dd271",
+      "warehouseId": "4",
+      "amount": "10"
+    },
+    {
+      "productId": "98ce8b67-16b1-4dee-bafe-b97c168dd271",
+      "warehouseId": "1",
+      "amount": "15"
+    },
+    {
+      "productId": "9c86388d-0d2d-436d-93c4-04036ddf9ca0",
+      "warehouseId": "4",
+      "amount": "10"
+    },
+    {
+      "productId": "9c86388d-0d2d-436d-93c4-04036ddf9ca0",
+      "warehouseId": "1",
+      "amount": "15"
     }
   ]
 }

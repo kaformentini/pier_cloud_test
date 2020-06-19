@@ -15,6 +15,8 @@ routes.delete("/product/:id", (ProductsController.delete));
 
 routes.put("/product_warehouse/:id", (WarehouseController.updateProductWarehouse));
 routes.put("/product_amount_decrese/:id", (WarehouseController.updateAmount));
+routes.get("/product_warehouse/:id", (WarehouseController.showProductWarehouse));
+
 
 
 module.exports = routes;

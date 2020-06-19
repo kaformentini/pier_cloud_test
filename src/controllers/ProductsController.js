@@ -15,8 +15,10 @@ module.exports = {
 
   async create(req, res) {
     const product = req.body;
+    const productWarehouse = (product.warehouses).length;
 
-    const newId = uuidv4();
+    const newId = createUniqId();
+
     db.get("products")
       .push({
         name: product.name,
@@ -24,13 +26,11 @@ module.exports = {
         description: product.description,
       })
       .write();
-    db.get("productWarehouse")
-      .push({
-        productId: newId,
-        warehouseId: product.warehouseId,
-        amount: product.amount,
-      })
-      .write();
+
+    for (var i = 0; i < (productWarehouse); i++) {
+      setWarehouse(product.warehouses[i], newId);
+    }
+
     return res.sendStatus("201");
   },
 
@@ -57,6 +57,20 @@ module.exports = {
     return res.sendStatus("204");
   },
 };
+
+function createUniqId() {
+  return uuidv4();
+}
+
+function setWarehouse(product, newId) {
+  db.get("productWarehouse")
+    .push({
+      productId: newId,
+      warehouseId: product.warehouseId,
+      amount: product.amount,
+    })
+    .write();
+}
 
 // function newId(){
 //   const lastProduct = db.get("products").last().value();
