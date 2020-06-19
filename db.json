@@ -5,6 +5,24 @@
       "id": 1,
       "amount": 20,
       "description": "vermelha"
+    },
+    {
+      "name": "cadeira",
+      "id": 1,
+      "amount": 20,
+      "description": "aksjbdkjsad"
+    },
+    {
+      "name": "cadeira",
+      "id": 1,
+      "amount": 20,
+      "description": "aksjbdkjsad"
+    },
+    {
+      "name": "mesa",
+      "id": 1,
+      "amount": 30,
+      "description": "aksjbdkjsad"
     }
   ],
   "werehouse": []
