@@ -1,24 +1,9 @@
 {
   "products": [
     {
-      "name": "mesa",
-      "id": "39eaae4f-cc86-4b6e-bc86-becafcecef7a",
-      "amount": 20,
+      "name": "Banana",
+      "id": "ff72df10-44c8-4189-b566-835e38e5cef3",
       "description": "vermelha"
-    },
-    {
-      "name": "mesa",
-      "id": "cb00556e-cc3b-4fbf-93a6-b920aa8c04d4",
-      "amount": 20,
-      "description": "vermelha",
-      "werehouseId": "1"
-    },
-    {
-      "name": "mesa",
-      "id": "bbe8e37e-f6ac-4e0e-9e98-787a43f0d884",
-      "amount": 20,
-      "description": "vermelha",
-      "werehouseId": "2"
     }
   ],
   "werehouse": [
@@ -37,6 +22,13 @@
     {
       "nome": "oeste",
       "id": 4
+    }
+  ],
+  "productWerehouse": [
+    {
+      "productId": "ff72df10-44c8-4189-b566-835e38e5cef3",
+      "werehouseId": "4",
+      "amount": 9
     }
   ]
 }
