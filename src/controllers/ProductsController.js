@@ -1,9 +1,10 @@
 const lowdb = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
-// const { delete } = require("../routes");
 
 const adapter = new FileSync("db.json");
 const db = lowdb(adapter);
+
+const { v4: uuidv4 } = require('uuid');
 
 module.exports = {
   async list(req, res) {
@@ -14,13 +15,15 @@ module.exports = {
 
   async create(req, res) {
     const product = req.body;
+    
     console.log(product);
     db.get("products")
       .push({
         name: product.name,
-        id: product.id,
+        id: uuidv4(),
         amount: product.amount,
         description: product.description,
+        werehouseId: product.werehouseId,
       })
       .write();
     return res.sendStatus("201");
@@ -31,7 +34,7 @@ module.exports = {
     console.log(queryProduct);
     const product = db
       .get("products")
-      .find({ id: Number(queryProduct.id) })
+      .find({ id: queryProduct.id })
       .value();
     return res.json(product);
   },
@@ -40,7 +43,7 @@ module.exports = {
     const queryProduct = req.params;
     const productChanges = req.body;
     db.get("products")
-      .find({ id: Number(queryProduct.id) })
+      .find({ id: queryProduct.id })
       .assign(productChanges)
       .write();
     return res.sendStatus("204");
@@ -49,8 +52,14 @@ module.exports = {
   async delete(req, res) {
     const queryProduct = req.params;
     db.get("products")
-      .remove({ id: Number(queryProduct.id) })
+      .remove({ id: queryProduct.id })
       .write();
     return res.sendStatus("204");
   },
 };
+
+// function newId(){
+//   const lastProduct = db.get("products").last().value();
+//   const newId = Number(lastProduct.id) + 1;
+//   return newId;
+// }
