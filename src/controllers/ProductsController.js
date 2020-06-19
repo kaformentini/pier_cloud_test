@@ -1,11 +1,12 @@
 const lowdb = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
+// const { delete } = require("../routes");
 
 const adapter = new FileSync("db.json");
 const db = lowdb(adapter);
 
 module.exports = {
-  async index(req, res) {
+  async list(req, res) {
     // console.log("aqui");
     const products = db.get("products").value();
     return res.json(products);
@@ -22,11 +23,34 @@ module.exports = {
         description: product.description,
       })
       .write();
+    return res.sendStatus("201");
   },
 
-  // async update(req, res) {
-  //   const queryProduct = req.body
-  //   db.get("products").find({queryProduct.find}).assign({queryProduct.change});
-  // }
-    
+  async show(req, res) {
+    const queryProduct = req.params;
+    console.log(queryProduct);
+    const product = db
+      .get("products")
+      .find({ id: Number(queryProduct.id) })
+      .value();
+    return res.json(product);
+  },
+
+  async update(req, res) {
+    const queryProduct = req.params;
+    const productChanges = req.body;
+    db.get("products")
+      .find({ id: Number(queryProduct.id) })
+      .assign(productChanges)
+      .write();
+    return res.sendStatus("204");
+  },
+
+  async delete(req, res) {
+    const queryProduct = req.params;
+    db.get("products")
+      .remove({ id: Number(queryProduct.id) })
+      .write();
+    return res.sendStatus("204");
+  },
 };

@@ -2,31 +2,25 @@
   "products": [
     {
       "name": "cadeira",
-      "id": 1,
-      "amount": 20,
-      "description": "vermelha"
-    },
-    {
-      "name": "cadeira",
-      "id": 1,
+      "id": 2,
       "amount": 20,
       "description": "aksjbdkjsad"
     },
     {
       "name": "cadeira",
-      "id": 1,
+      "id": 3,
       "amount": 20,
       "description": "aksjbdkjsad"
     },
     {
       "name": "mesa",
-      "id": 1,
+      "id": 4,
       "amount": 30,
       "description": "aksjbdkjsad"
     },
     {
       "name": "mesa",
-      "id": 1,
+      "id": 5,
       "amount": 30,
       "description": "aksjbdkjsad"
     }
