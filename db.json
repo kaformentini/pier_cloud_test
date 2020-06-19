@@ -4,9 +4,19 @@
       "name": "Banana",
       "id": "ff72df10-44c8-4189-b566-835e38e5cef3",
       "description": "vermelha"
+    },
+    {
+      "name": "Banana",
+      "id": "b009fc29-281b-4605-9aef-1b344276e624",
+      "description": "vermelha"
+    },
+    {
+      "name": "Banana",
+      "id": "53321257-f958-4398-8fe7-282d1c8f4ce6",
+      "description": "vermelha"
     }
   ],
-  "werehouse": [
+  "warehouse": [
     {
       "nome": "norte",
       "id": 1
@@ -24,11 +34,20 @@
       "id": 4
     }
   ],
-  "productWerehouse": [
+  "productWarehouse": [
     {
       "productId": "ff72df10-44c8-4189-b566-835e38e5cef3",
-      "werehouseId": "4",
+      "warehouseId": "3",
       "amount": 9
+    },
+    {
+      "productId": "b009fc29-281b-4605-9aef-1b344276e624",
+      "amount": 10
+    },
+    {
+      "productId": "53321257-f958-4398-8fe7-282d1c8f4ce6",
+      "warehouseId": "4",
+      "amount": 10
     }
   ]
 }

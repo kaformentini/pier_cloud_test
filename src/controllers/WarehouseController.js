@@ -5,13 +5,13 @@ const adapter = new FileSync("db.json");
 const db = lowdb(adapter);
 
 module.exports = {
-  async updateProductWerehouse(req, res) {
+  async updateProductWarehouse(req, res) {
     const queryProduct = req.params;
-    const werehouseChanges = req.body;
-    // console.log(queryProduct, productChanges)
-    db.get("productWerehouse")
+    const warehouseChanges = req.body;
+    console.log(queryProduct, warehouseChanges)
+    db.get("productWarehouse")
       .find({ productId: queryProduct.id })
-      .assign(werehouseChanges)
+      .assign(warehouseChanges)
       .write();
     return res.sendStatus("204");
   },
@@ -21,13 +21,13 @@ module.exports = {
     const amountDecrese = Number(req.body.sold);
 
     const product = db
-      .get("productWerehouse")
+      .get("productWarehouse")
       .find({ productId: queryProduct.id })
       .value();
       
     const newAmount = Number(product.amount) - amountDecrese;
 
-    db.get("productWerehouse")
+    db.get("productWarehouse")
       .find({ productId: queryProduct.id })
       .assign({ amount: newAmount })
       .write();

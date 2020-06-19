@@ -10,7 +10,6 @@ module.exports = {
   async list(req, res) {
     // console.log("aqui");
     const products = db.get("products").value();
-
     return res.json(products);
   },
 
@@ -25,10 +24,10 @@ module.exports = {
         description: product.description,
       })
       .write();
-    db.get("productWerehouse")
+    db.get("productWarehouse")
       .push({
         productId: newId,
-        werehouseId: product.werehouseId,
+        warehouseId: product.warehouseId,
         amount: product.amount,
       })
       .write();
@@ -37,7 +36,6 @@ module.exports = {
 
   async show(req, res) {
     const queryProduct = req.params;
-    console.log(queryProduct);
     const product = db.get("products").find({ id: queryProduct.id }).value();
     return res.json(product);
   },
@@ -55,7 +53,7 @@ module.exports = {
   async delete(req, res) {
     const queryProduct = req.params;
     db.get("products").remove({ id: queryProduct.id }).write();
-    db.get("productWerehouse").remove({ productId: queryProduct.id }).write();
+    db.get("productWarehouse").remove({ productId: queryProduct.id }).write();
     return res.sendStatus("204");
   },
 };
