@@ -9,7 +9,6 @@ const { v4: uuidv4 } = require("uuid");
 module.exports = {
   async list(req, res) {
     const products = db.get("products").value();
-    const productsNum = products.length;
 
     const productsWithWarehouses = products.map(function (product) {
       const productWarehouse = db
@@ -53,6 +52,14 @@ module.exports = {
   async show(req, res) {
     const queryProduct = req.params;
     const product = db.get("products").find({ id: queryProduct.id }).value();
+
+    const productWarehouse = db
+      .get("productWarehouse")
+      .filter({ productId: product.id })
+      .value();
+
+    product.warehouses = productWarehouse;
+
     return res.json(product);
   },
 
