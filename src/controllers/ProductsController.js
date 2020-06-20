@@ -8,14 +8,30 @@ const { v4: uuidv4 } = require("uuid");
 
 module.exports = {
   async list(req, res) {
-    // console.log("aqui");
     const products = db.get("products").value();
-    return res.json(products);
+    const productsNum = products.length;
+
+    const productsWithWarehouses = products.map(function (product) {
+      const productWarehouse = db
+        .get("productWarehouse")
+        .filter({ productId: product.id })
+        .value();
+      product.warehouses = productWarehouse;
+      return product;
+    });
+
+    // for (var i = 0; i < (productsNum); i++) {
+    //   const product = products[i]
+    //   const productWarehouse = db.get("productWarehouse").filter({ productId: product.id }).value();
+    //   products[i].warehouses = productWarehouse
+    // }
+
+    return res.json(productsWithWarehouses);
   },
 
   async create(req, res) {
     const product = req.body;
-    const productWarehouse = (product.warehouses).length;
+    const productWarehouse = product.warehouses.length;
 
     const newId = createUniqId();
 
@@ -27,7 +43,7 @@ module.exports = {
       })
       .write();
 
-    for (var i = 0; i < (productWarehouse); i++) {
+    for (var i = 0; i < productWarehouse; i++) {
       setWarehouse(product.warehouses[i], newId);
     }
 

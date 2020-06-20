@@ -19,6 +19,11 @@
       "name": "mamao",
       "id": "9c86388d-0d2d-436d-93c4-04036ddf9ca0",
       "description": "vermelha"
+    },
+    {
+      "name": "mamao",
+      "id": "064322d7-184e-4f06-8fd1-0d97017e00d5",
+      "description": "vermelha"
     }
   ],
   "warehouse": [
@@ -77,6 +82,16 @@
     },
     {
       "productId": "9c86388d-0d2d-436d-93c4-04036ddf9ca0",
+      "warehouseId": "1",
+      "amount": "15"
+    },
+    {
+      "productId": "064322d7-184e-4f06-8fd1-0d97017e00d5",
+      "warehouseId": "4",
+      "amount": "10"
+    },
+    {
+      "productId": "064322d7-184e-4f06-8fd1-0d97017e00d5",
       "warehouseId": "1",
       "amount": "15"
     }
