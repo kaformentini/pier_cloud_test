@@ -7,11 +7,11 @@
 ## Buscar produto por ID
 
 ## Editar produto
- # Editar caracteristicas do produto
+ ### Editar caracteristicas do produto
  
- # Editar warehouse
+ ### Editar warehouse
  
- # Decrementar quantidade (venda)
+ ### Decrementar quantidade (venda)
 
 ## Excluir produto
 
