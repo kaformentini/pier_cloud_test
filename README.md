@@ -1,5 +1,5 @@
 # API para controle de estoque
-Pier Clound Test
+Pier Cloud Test
 
 API com operaçãos para sistemas de estoque de produtos.
 
