@@ -1,99 +1,54 @@
 {
   "products": [
     {
-      "name": "mamao",
+      "name": "Cadeira",
       "id": "30491d92-0669-4539-beba-1c8031db8311",
-      "description": "vermelha"
+      "description": "Madeira, estofada."
     },
     {
-      "name": "mamao",
-      "id": "b7e3fcd9-2293-42dc-9859-a0c7c8c604db",
-      "description": "vermelha"
-    },
-    {
-      "name": "mamao",
-      "id": "98ce8b67-16b1-4dee-bafe-b97c168dd271",
-      "description": "vermelha"
-    },
-    {
-      "name": "mamao",
-      "id": "9c86388d-0d2d-436d-93c4-04036ddf9ca0",
-      "description": "vermelha"
-    },
-    {
-      "name": "mamao",
-      "id": "064322d7-184e-4f06-8fd1-0d97017e00d5",
-      "description": "vermelha"
+      "name": "Mesa",
+      "id": "f24e8f21-f60b-40bb-a6cd-b2e854a07381",
+      "description": "Vidro trasnparente."
     }
   ],
   "warehouse": [
     {
-      "nome": "norte",
+      "nome": "Norte",
       "id": 1
     },
     {
-      "nome": "leste",
+      "nome": "Leste",
       "id": 2
     },
     {
-      "nome": "sul",
+      "nome": "Sul",
       "id": 3
     },
     {
-      "nome": "oeste",
+      "nome": "Oeste",
       "id": 4
     }
   ],
   "productWarehouse": [
     {
       "productId": "30491d92-0669-4539-beba-1c8031db8311",
-      "warehouseId": "4",
+      "warehouseId": "1",
       "amount": "10"
     },
     {
       "productId": "30491d92-0669-4539-beba-1c8031db8311",
-      "warehouseId": "1",
+      "warehouseId": "2",
       "amount": "15"
     },
     {
-      "productId": "b7e3fcd9-2293-42dc-9859-a0c7c8c604db",
-      "warehouseId": "4",
+      "productId": "f24e8f21-f60b-40bb-a6cd-b2e854a07381",
+      "warehouseId": "3",
+      "amount": "5"
+    },
+    {
+      "productId": "f24e8f21-f60b-40bb-a6cd-b2e854a07381",
+      "warehouseId": "1",
       "amount": "10"
-    },
-    {
-      "productId": "b7e3fcd9-2293-42dc-9859-a0c7c8c604db",
-      "warehouseId": "1",
-      "amount": "15"
-    },
-    {
-      "productId": "98ce8b67-16b1-4dee-bafe-b97c168dd271",
-      "warehouseId": "4",
-      "amount": "10"
-    },
-    {
-      "productId": "98ce8b67-16b1-4dee-bafe-b97c168dd271",
-      "warehouseId": "1",
-      "amount": "15"
-    },
-    {
-      "productId": "9c86388d-0d2d-436d-93c4-04036ddf9ca0",
-      "warehouseId": "4",
-      "amount": "10"
-    },
-    {
-      "productId": "9c86388d-0d2d-436d-93c4-04036ddf9ca0",
-      "warehouseId": "1",
-      "amount": "15"
-    },
-    {
-      "productId": "064322d7-184e-4f06-8fd1-0d97017e00d5",
-      "warehouseId": "4",
-      "amount": "10"
-    },
-    {
-      "productId": "064322d7-184e-4f06-8fd1-0d97017e00d5",
-      "warehouseId": "1",
-      "amount": "15"
     }
   ]
 }
