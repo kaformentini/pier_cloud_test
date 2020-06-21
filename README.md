@@ -7,7 +7,7 @@ Server: express.js
 Banco de dados: lowdb
 Gerador de ID: uuid
 
-### iniciando
+### Iniciando
 
  ```npm install```
 
@@ -222,6 +222,3 @@ db:
 
 exemplo:
 http://localhosr:3001/api/product/30491d92-0669-4539-beba-1c8031db8311
- 
-### Mostra warehouse/quantidade de produto (por ID do produto)
-"http://localhost:3001/api/product_warehouse/:id"
