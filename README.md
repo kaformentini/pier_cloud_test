@@ -1,11 +1,15 @@
 # API para controle de estoque
-Pier Cloud Test
+Pier Cloud Teste
 
 API com operaçãos para sistemas de estoque de produtos.
 
-Server: express.js
+
+**Ferramentas:**
+Server:express.js
 Banco de dados: lowdb
 Gerador de ID: uuid
+Insominia
+Docker
 
 ### Iniciando
 
@@ -14,7 +18,7 @@ Gerador de ID: uuid
  ```npm run init_server```
 
 ### Criar produto
-"http://localhost:3001/api/products"
+post: "http://localhost:3001/api/products"
 
 exemplo de request:
 ```
@@ -59,7 +63,7 @@ db:
     
 
 ### Lista de produtos
-"http://localhost:3001/api/products"
+get: "http://localhost:3001/api/products"
 
 Retorno:
 ```
@@ -101,7 +105,7 @@ Retorno:
 ]
 ```
 ### Buscar produto por ID
-"http://localhost:3001/api/product/:id"
+get: "http://localhost:3001/api/product/:id"
 
 exemplo:
 http://localhosr:3001/api/product/30491d92-0669-4539-beba-1c8031db8311
@@ -131,7 +135,7 @@ retorno:
 
 ### Editar produto
 * Editar caracteristicas do produto
-"http://localhost:3001/api/product/:id"
+put: "http://localhost:3001/api/product/:id"
 
 exemplo:
 http://localhosr:3001/api/product/30491d92-0669-4539-beba-1c8031db8311
@@ -156,7 +160,7 @@ db:
 }
 ``` 
 * Editar warehouse
-"http://localhost:3001/api/product_warehouse/:id"
+put: "http://localhost:3001/api/product_warehouse/:id"
  
 exemplo:
 http://localhosr:3001/api/product/30491d92-0669-4539-beba-1c8031db8311
@@ -187,7 +191,7 @@ db:
 ``` 
 
 * Decrementar quantidade (venda)
-"http://localhost:3001/api/product_amount_decrese/:id"
+put: "http://localhost:3001/api/product_amount_decrese/:id"
 
 exemplo:
 http://localhosr:3001/api/product/30491d92-0669-4539-beba-1c8031db8311
@@ -218,7 +222,7 @@ db:
 ```
 
 ### Excluir produto
-"http://localhost:3001/api/product/:id"
+delete: "http://localhost:3001/api/product/:id"
 
 exemplo:
 http://localhosr:3001/api/product/30491d92-0669-4539-beba-1c8031db8311
