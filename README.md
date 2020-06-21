@@ -5,10 +5,15 @@ API com operaçãos para sistemas de estoque de produtos.
 
 
 **Ferramentas:**
+
 Server:express.js
+
 Banco de dados: lowdb
+
 Gerador de ID: uuid
+
 Insominia
+
 Docker
 
 ### Iniciando
