@@ -237,3 +237,10 @@ delete: http://localhost:3001/api/product/:id
 
 exemplo:
 http://localhosr:3001/api/product/30491d92-0669-4539-beba-1c8031db8311
+
+### To do
+* Arrumar mudança de warehouse e decrementar quantidade de produtos
+	Atualmente ele busca e salva a alteração no primeiro objeto encontrado. 
+	Solução: adicionar mais um valor para filtrar o produto correto;
+
+* Crud para warehouse;
